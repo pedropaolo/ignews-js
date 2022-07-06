@@ -27,6 +27,10 @@ nav {
         color: #a8a8b3;
 
         transition: color 0.2s;
+
+        & + a {
+            margin-left: 2rem;
+        }
     
         &:hover {
             color: white
@@ -50,8 +54,14 @@ nav {
 
         }
     }
-    
+
   
+}
+
+// margin-left: auto -> joga o componente o mais para a direita possivel
+
+button {
+    margin-left: auto;
 }
 
 
