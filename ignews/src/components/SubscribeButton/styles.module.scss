@@ -1,0 +1,27 @@
+.subscribeButton {
+
+    // Altura largura e formato
+    height: 4rem;
+    width: 260px;
+    border: 0;
+    border-radius: 2rem;
+
+    // cor de fundo e fonte
+    background: #eba417;
+    color: #171923;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    // Organização dos elementos internos
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // efeito hover 
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8)
+    }
+
+}

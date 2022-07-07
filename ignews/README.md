@@ -6,7 +6,7 @@ Aplicação de conecta com diferentes APIs para implementar diferentes funcional
 - Stripe (Api para pagamentos online) 
 - FaunaDB (Banco para salvamento das informações do usuário) - https://fauna.com/
 
-<img src="./fluxo-aplicação.PNG" alt="My cool logo"/>
+<img src="./fluxo-aplicação.PNG" alt="Fluxo da aplicação"/>
 
 ## Tecnologias utilizadas
 
