@@ -32,3 +32,9 @@ Quando: São necessários dados dinâmicos da sessão do usuário. informações
 Quando: home de um blog, página de um produto em um e-commerce; Útil para casos em que o HTML construído vai ser mostrado da mesma forma para todos os usuários que o acessarem.
 
   <img src="./models.PNG" alt="Fluxo da aplicação"/>
+
+## Na Aplicação
+
+Para este projeto, na página Home, sempre será mostrado para os usuários a mesma informação; Sob este paradigma, torna-se vantajoso a utilização do Static Site Generation, contextualizado acima. Isso é implementado no código no arquivo src/pages/index.tsx, pela função getStaticProps.
+
+A  propriedade revalidate, definida nessa mesma função, determina o tempo que a página deve ser mantida sem a necessidade de reconstrução. O tempo de ravalidação definido para este projeto é de 24 horas.
