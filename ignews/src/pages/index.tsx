@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { SubscribeButton } from '../components/SubscribeButton'
 import { stripe } from '../services/stripe'
@@ -56,7 +56,7 @@ export default function Home( {product}) {
 
 // Executar no servidor node do Nextjs
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
 
   // Dentro dessa função é possível devolver : redirect , props ou notfound
 
@@ -75,7 +75,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       product,
-    }
+    },
+
+    // Quanto tempo essa página deve ser mantida sem a necessidade de revalidação (reconstrução)
+
+    revalidate: 60 * 60 * 24, //24 horas - tempo em segundos
 
   }
 
