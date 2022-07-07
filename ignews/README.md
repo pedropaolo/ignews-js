@@ -16,20 +16,20 @@ Aplicação de conecta com diferentes APIs para implementar diferentes funcional
 
 ## NEXT - formas de fazer chamadas a API -> popular a página com informações
 
-- Client-side : Ex: fetch(), axios no componente, faz a chamada pelo lado do cliente: requisição HTTP;
+Client-Side : Ex: fetch(), axios no componente, faz a chamada pelo lado do cliente: requisição HTTP;
 
-Quando: outros casos; informação que não precisam ser carregadas quando a página for montada, ou seja, dados que só serão carregados após uma determinada ação do usuário ou algum evento específico
+- Quando: Ao apresentar informações que não precisam ser carregadas de imediato quando a página for montada, ou seja, dados que só serão carregados após uma determinada ação do usuário ou algum evento específico.
 
 
-- Server-side:  Faz a chamada no servidor nodejs do next. Chamada HTTP através do server side rendering  (Servidor Node.js do Next) ao invés de realizar no browser.
+Server-Side:  Faz a chamada no servidor node.js do Next, e não no browser.
 
-Isso garante que a aplicação já será renderizada contendo os dados da API, que pode ser mais lenta que a construção da página pelo browser [ layout shift ].
+Isso garante que a aplicação já será renderizada contendo os dados da API, que pode ser mais lenta que a construção da página pelo browser [ layout shift ]. 
 
-Quando: São necessários dados dinâmicos da sessão do usuário. informações em tempo real
+- Quando: São necessários dados dinâmicos da sessão do usuário, informações em tempo real.
 
--  Static side generation: É uma forma de otimizar aplicações que possuem páginas estáticas => que serão mostradas da mesma forma pra atodos aqueles que a acessarem. 
+Static Site Generation: Objetiva otimizar aplicações que possuem páginas estáticas, isto é que serão mostradas da mesma forma para todos aqueles que a acessarem. 
 
-Quando: home de um blog, página de um produto em um e-commerce; Útil para casos em que o HTML construído vai ser mostrado da mesma forma para todos os usuários que o acessarem.
+- Quando: home de um blog, página de um produto em um e-commerce;
 
   <img src="./models.PNG" alt="Fluxo da aplicação"/>
 
