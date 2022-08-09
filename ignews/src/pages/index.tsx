@@ -16,7 +16,7 @@ export default function Home( {product}) {
   return (
     <>
      <Head>
-      <title>Home | ig.nes</title>
+      <title>Home | ig.news</title>
      </Head>
 
      <main className={styles.contentContainer}>
