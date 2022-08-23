@@ -61,6 +61,22 @@ Vantajoso para aplicações do tiver serverless
 
 NEXTAUTH CALLBACKS - Funções que são automaticamente executadas após uma determinada ação
 
+# OBSERVAÇÕES IMPORTANTES
+
+Seguem abaixo as configurações necessárias para o correto funcionamento da canexão da aplicação com a API do FaunaDB:
+
+- É necessário que o database criado no FaunaDb esteja configurado com a região Classical:
+
+<!-- Imagem com configuração setada-->
+<img src="./images/region-config.PNG" alt="Fluxo da aplicação"/>
+
+- É necessário que seja vinculado ao Database um índice ( INDEX ) de nome users_by_emai, com as configurações apresentadas na figura abaixo:
+  
+  <img src="./images/index-config.PNG" alt="Fluxo da aplicação"/>
+
+
+
+
 ## MISCELANEOUS
 <!-- Link para solução e atualização do Next -->
 <!-- https://app.rocketseat.com.br/h/forum/react-js/acde5602-bac1-4f69-8161-59feefed16bd -->
