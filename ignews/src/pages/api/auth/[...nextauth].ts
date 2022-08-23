@@ -27,14 +27,28 @@ export default NextAuth({
     async signIn({ user, account, profile }) {
 
       const { email } = user;
-        await fauna.query(
-          q.Create(
-            q.Collection("users"),
-            { data: { email: email }}
-          )
-        )
+      console.log("SKIIIIIIIIIIIIIIRL" , user)
 
-        return true
+      // Verifica se usuário ja existe no banco
+      // Caso exista, resgata os dados do mesmo
+      // Caso não exista, cria um novo usuário no bando
+
+      // OBS: PERMITE A CRIAÇÂO DE USUARIOS DUPLICADOS
+
+      try {
+        await fauna.query(
+            q.Create(
+              q.Collection('users'),
+              { data : { email }}
+            )
+          )
+         
+         return true
+      }
+
+      catch {
+        return false
+      }
      
      
     },
